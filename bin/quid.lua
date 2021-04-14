@@ -2,10 +2,26 @@
 
 local sixtyones = 0xfffffffffffffff
 
+-- 32-bit integer implementations, obviously, truncate this
+-- floating-point-only implementations round to even and overshoot
 assert(#('%x'):format(sixtyones) == 15,
   "Sub-60-bit integer support is not implemented")
 
-local random, floor = math.random, math.floor
+local random
+
+if tonumber(_VERSION:match'%d+$') >= 4 then
+  random = math.random
+else -- compensate for weaker RNG in older versions of Lua
+  math.randomseed(tonumber(tostring({}):match('0x%x+$')) + os.time())
+  random = function(m, n)
+    if n then return math.random(m, n)
+    elseif m > 0xffffffff then
+      return (math.random(m >> 32) << 32) | math.random(m & 0xffffffff) 
+    else return math.random(m) end
+  end
+end
+
+local floor = math.floor
 local insert, concat = table.insert, table.concat
 local upper, lower = string.upper, string.lower
 local casecoerce = lower
