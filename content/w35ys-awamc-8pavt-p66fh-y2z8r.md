@@ -11,7 +11,8 @@
 
 might have been initially framed around one specific board I had in mind, but be suitable for another environment:
 
-- [USB WS2812 Controller](9jfy6-qm0et-rza63-x73dd-b6b8r)
+- [ws2812 general hub](4x53s-d838s-yjb5k-128sm-fsgpr)
+  - [USB WS2812 Controller](9jfy6-qm0et-rza63-x73dd-b6b8r)
 - [Smart Micro SD USB Reader](550rq-82k8a-mhaej-yat85-8t32t)
 
 ## Other nearby pages

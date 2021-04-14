@@ -21,3 +21,5 @@ A project using [ESP8266 chips](qt7f4-7zadv-wp8q1-wtahm-mzcmz) to light a strip 
 ## links
 
 https://blog.prusaprinters.org/3d-printing-lamps-and-embedding-led-lights/ lists some stuff for making stuff with LEDs
+
+[ws2812 general hub](4x53s-d838s-yjb5k-128sm-fsgpr)
